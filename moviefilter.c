@@ -15,5 +15,5 @@ extern Movie movies[10];
 extern Friend friends[10];
 extern Usermovie usermovies[10];
 
-extern int MovieSearch(char []);
+//extern int MovieSearch(char []);
 

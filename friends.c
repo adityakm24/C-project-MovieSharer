@@ -11,7 +11,9 @@ extern Movie movies[10];
 extern Friend friends[10];
 extern Usermovie usermovies[10];
 
-extern int UserSearch(char []);
+//extern int UserSearch(char []);
+
+extern log_user;
 
 void addfriend(){
     char name[255];

@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "structs.h"
 #include "functions.h"
-#include "friends.c"
-#include "movies.c"
-#include "misc.c"
+//#include "friends.c"
+//#include "movies.c"
+//#include "misc.c"
 
-
+int UserCount = 5;
+int MovieCount = 5;
+int log_user;
 
 User users[10] = {
         {0, "Anish", "12345"},

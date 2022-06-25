@@ -22,6 +22,10 @@ void findMoviebygenre();
 void printWelcome();
 void friendsCall();
 void moviesCall();
+void login();
+void SignUp();
+int UserSearch(char []);
+int MovieSearch(char []);
 
 // Friends functions
 void viewinMovies(int);

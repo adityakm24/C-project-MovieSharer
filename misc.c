@@ -13,6 +13,10 @@ extern Movie movies[10];
 extern Friend friends[10];
 extern Usermovie usermovies[10];
 
+extern log_user;
+extern UserCount;
+extern MovieCount;
+
 int UserSearch(char Uname[255]) {
     for (int i = 0; i < UserCount; i++) {
         if(!strcmp(Uname, users[i].uname)) {

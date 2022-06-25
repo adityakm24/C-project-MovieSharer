@@ -30,8 +30,4 @@ typedef struct usermovie {
     int mid[255];
 } Usermovie;
 
-int UserCount = 5;
-int MovieCount = 5;
-int log_user;
-
 #endif //NETFLIXALT_STRUCTS_H
