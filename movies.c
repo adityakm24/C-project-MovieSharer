@@ -28,7 +28,7 @@ void downloadMovie(char movie[255]) {
         return;
     }
 
-    int count = 0, ch1, ch2 = 0;
+    int count = 0, ch1;
     int friendHasMovie[255], friend_id;
     char friend_name[255];
 
@@ -45,17 +45,19 @@ void downloadMovie(char movie[255]) {
         for(int i = 0; i < count; i++) {
             printf("%d. %s\n", i+1, users[friendHasMovie[i]].uname);
         }
-        printf("Do you want to download from any of them(1 for yes, 2 for no)? ");
+
         do {
+            printf("Do you want to download from any of them(1 for yes, 2 for no)? ");
             scanf("%d", &ch1);
         } while(ch1 != 1 && ch1 != 2);
 
         if (ch1 == 1) {
             printf("Enter the name of friend you want to download from: ");
             scanf("%s", friend_name);
-            usermovies[log_user].mid[usermovies[log_user].movieCount] = movie_id;
-            usermovies[log_user].movieCount++;
-            printf("%s has been been downloaded from %s\n", movie, friend_name);
+            getMovie(movie, friend_name);
+//            usermovies[log_user].mid[usermovies[log_user].movieCount] = movie_id;
+//            usermovies[log_user].movieCount++;
+//            printf("%s has been been downloaded from %s\n", movie, friend_name);
             return;
         }
         usermovies[log_user].mid[usermovies[log_user].movieCount] = movie_id;
@@ -84,7 +86,7 @@ void deleteMovie(char movie[255]) {
         usermovies[log_user].mid[i] = usermovies[log_user].mid[i + 1];
     }
     usermovies[log_user].movieCount--;
-
+    printf("%s deleted from your storage.\n", movie);
 }
 
 void viewMovies() {
@@ -142,7 +144,7 @@ void getMovie(char movie[255], char friend[255]) {
         return;
     }
     if (friend_index == -1) {
-        printf("\'%s\' does not exist in your friends list!\n");
+        printf("\'%s\' does not exist in your friends list!\n", friend);
         return;
     }
     if (movie_index == -1) {
@@ -151,6 +153,6 @@ void getMovie(char movie[255], char friend[255]) {
     }
     usermovies[log_user].mid[usermovies[log_user].movieCount] = movie_id;
     usermovies[log_user].movieCount++;
-    printf("You received \'%s\' from %s", movie, friend);
+    printf("You received \'%s\' from %s\n\n", movie, friend);
 
 }
