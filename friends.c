@@ -63,9 +63,7 @@ void viewfriends(){
 
     }
 }
-void policy(){
-    printf("Bitch please\nyou dont need no policy\ncause if you did you wouldn't be\nstill alive\nyou dumb fudge son of a biscuit");
-}
+
 void viewinMovies(int n) {
 
     if (usermovies[n].movieCount == 0) {

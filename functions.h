@@ -33,6 +33,5 @@ void addfriend();
 void removefriend();
 void friendmovie();
 void viewfriends();
-void policy();
 
 #endif //NETFLIXALT_FUNCTIONS_H
